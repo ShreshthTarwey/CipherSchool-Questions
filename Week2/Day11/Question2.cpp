@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-bool find(int arr[],int n,int target){
+int find(int arr[],int n,int target){
     for(int i=0;i<n;i++){
         if(arr[i]==target){
-            return true;
+            return i+1;
         }
     }
-    return false;
+    return -1;
 }
 int main(){
     int n;
@@ -17,10 +17,5 @@ int main(){
     }
     int target;
     cin>> target;
-    if(find(arr,n,target)){
-        cout<<"YES";
-    }
-    else{
-        cout<<"NO";
-    }
+    cout<<find(arr,n,target);
 }
